@@ -17,7 +17,7 @@ class MyOSCClient extends StatefulWidget {
 
 class MyOSCClientState extends State<MyOSCClient> {
   int _tabIndex = 0;
-  final tabTextStyleNormal = new TextStyle(color: const Color(0xff969696));
+  final tabTextStyleNormal = new TextStyle(color: Colors.black26);
   final tabTextStyleSelected = new TextStyle(color: Colors.blue);
 
   var tabImages;
@@ -99,13 +99,13 @@ class MyOSCClientState extends State<MyOSCClient> {
                 icon: new Icon (Icons.home),
                 title: getTabTitle(0)),
             new BottomNavigationBarItem(
-                icon: new Icon (Icons.home),
+                icon: new Icon (Icons.hearing),
                 title: getTabTitle(1)),
             new BottomNavigationBarItem(
-                icon: new Icon (Icons.home),
+                icon: new Icon (Icons.ac_unit),
                 title: getTabTitle(2)),
             new BottomNavigationBarItem(
-                icon: new Icon (Icons.home),
+                icon: new Icon (Icons.linked_camera),
                 title: getTabTitle(3)),
           ],
           currentIndex: _tabIndex,
