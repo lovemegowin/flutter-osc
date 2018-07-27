@@ -18,7 +18,7 @@ class MyOSCClient extends StatefulWidget {
 class MyOSCClientState extends State<MyOSCClient> {
   int _tabIndex = 0;
   final tabTextStyleNormal = new TextStyle(color: const Color(0xff969696));
-  final tabTextStyleSelected = new TextStyle(color: const Color(0xff63ca6c));
+  final tabTextStyleSelected = new TextStyle(color: Colors.blue);
 
   var tabImages;
   var _body;
@@ -83,7 +83,7 @@ class MyOSCClientState extends State<MyOSCClient> {
     initData();
     return new MaterialApp(
       theme: new ThemeData(
-          primaryColor: const Color(0xFF63CA6C)
+          primaryColor: Colors.blue
       ),
       home: new Scaffold(
         appBar: new AppBar(
@@ -91,19 +91,21 @@ class MyOSCClientState extends State<MyOSCClient> {
           iconTheme: new IconThemeData(color: Colors.white)
         ),
         body: _body,
-        bottomNavigationBar: new CupertinoTabBar(
+        bottomNavigationBar: new BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          fixedColor: Colors.blue,
           items: <BottomNavigationBarItem>[
             new BottomNavigationBarItem(
-                icon: getTabIcon(0),
+                icon: new Icon (Icons.home),
                 title: getTabTitle(0)),
             new BottomNavigationBarItem(
-                icon: getTabIcon(1),
+                icon: new Icon (Icons.home),
                 title: getTabTitle(1)),
             new BottomNavigationBarItem(
-                icon: getTabIcon(2),
+                icon: new Icon (Icons.home),
                 title: getTabTitle(2)),
             new BottomNavigationBarItem(
-                icon: getTabIcon(3),
+                icon: new Icon (Icons.home),
                 title: getTabTitle(3)),
           ],
           currentIndex: _tabIndex,
